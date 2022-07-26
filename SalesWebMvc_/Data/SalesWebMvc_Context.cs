@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using SalesWebMCV.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace SalesWebMvc_.Data
+namespace SalesWebMvc_.Models
 {
     public class SalesWebMvc_Context : DbContext
     {
-        public SalesWebMvc_Context (DbContextOptions<SalesWebMvc_Context> options)
+        public SalesWebMvc_Context(DbContextOptions<SalesWebMvc_Context> options)
             : base(options)
         {
         }
 
-        public DbSet<SalesWebMCV.Models.Departament> Departament { get; set; }
+        public DbSet<Departament> Departament { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
     }
 }
